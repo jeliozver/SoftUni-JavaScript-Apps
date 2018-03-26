@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books-REST-Service</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>Books</h1>
+<fieldset id="main">
+    <legend>Books</legend>
+    <div id="books"></div>
+</fieldset>
+<div id="aside">
+    <fieldset id="submitForm">
+        <legend>Add Book</legend>
+        <label>Title</label>
+        <input type="text" class="title"/>
+        <label>Author</label>
+        <input type="text" class="author"/>
+        <label>ISBN</label>
+        <input type="text" class="isbn"/>
+        <label>Tags</label>
+        <textarea class="tags"></textarea>
+        <button id="submitBtn">Submit</button>
+    </fieldset>
+</div>
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    SystemJS.config({meta: {format: 'cjs'}});
+    SystemJS.import('./scripts/app.js');
+</script>
+</body>
+</html>

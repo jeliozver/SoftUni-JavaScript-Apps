@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Knock</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div class="login">
+        <label for="username">Username: </label><input type="text" id="username"/>
+        <br/>
+        <label for="password">Password: </label><input type="password" id="password"/>
+        <br />
+        <button id="loginBtn">Login</button>
+    </div>
+    <div id="result">
+        <h1 id="user"></h1>
+        <button id="knockBtn">Knock</button>
+        <table>
+            <tr>
+                <th>Message</th>
+                <th>Answer</th>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script src="app.js"></script>
+</html>

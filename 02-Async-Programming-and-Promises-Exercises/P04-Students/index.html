@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="addForm">
+    <fieldset>
+        <legend>Add student</legend>
+        <form>
+            <label for="id">ID: </label><input type="number" id="id"/>
+            <label for="firstName">First Name: </label><input type="text" id="firstName"/>
+            <label for="lastName">Last Name: </label><input type="text" id="lastName"/>
+            <label for="facultyNumber">Faculty Number: </label><input type="text" id="facultyNumber"/>
+            <label for="grade">Grade: </label><input type="number" id="grade"/>
+            <button class="add">Add</button>
+        </form>
+    </fieldset>
+</div>
+<table id="results">
+    <tbody id="tbody">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Faculty Number</th>
+        <th>Grade</th>
+    </tr>
+    </tbody>
+</table>
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    SystemJS.config({meta: {format: 'cjs'}});
+    SystemJS.import('./scripts/app.js');
+</script>
+</body>
+</html>

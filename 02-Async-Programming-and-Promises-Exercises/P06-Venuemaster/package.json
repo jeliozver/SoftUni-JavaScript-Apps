@@ -1,0 +1,7 @@
+{
+  "name": "P03-Books-REST-Service",
+  "version": "0.0.1",
+  "dependencies": {
+    "systemjs": "latest"
+  }
+}
