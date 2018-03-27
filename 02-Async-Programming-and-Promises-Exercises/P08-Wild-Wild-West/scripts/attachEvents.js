@@ -11,30 +11,30 @@ function attachEvents() {
 
     addPlayerBtn.on('click', (event) => {
         event.preventDefault();
-        let body = {
+
+        if (addPlayerInput.val() === '') return;
+
+        request('POST', '', {
             name: addPlayerInput.val(),
             money: 500,
             bullets: 6
-        };
-
-        request('POST', '', body)
-            .then(loadPlayers)
+        }).then(loadPlayers)
             .catch(handleError);
+
+        addPlayerInput.val('');
     });
 
     saveBtn.on('click', (event) => {
         event.preventDefault();
 
-        let body = {
-            name: player.name,
-            money: player.money,
-            bullets: player.bullets
-        };
-
         if (player.name !== undefined) {
-            request('PUT', player.id, body)
-                .then(loadPlayers)
-                .catch(handleError)
+            request('PUT', player.id, {
+                    name: player.name,
+                    money: player.money,
+                    bullets: player.bullets
+                }
+            ).then(loadPlayers)
+                .catch(handleError);
         }
 
         $('#canvas').css('display', 'none');
@@ -138,8 +138,7 @@ function attachEvents() {
         }
 
         _startGame() {
-            $('#save').trigger('click')
-                .css('display', 'block');
+            $('#save').trigger('click').css('display', 'block');
             $('#canvas').css('display', 'block');
             $('#reload').css('display', 'block');
 
