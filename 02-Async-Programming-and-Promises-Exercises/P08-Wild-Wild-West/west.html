@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/style.css"/>
     <script src="scripts/jquery-3.3.1.min.js"></script>
     <script src="scripts/loadCanvas.js"></script>
+    <script src="scripts/requestLauncher.js"></script>
     <script src="scripts/attachEvents.js"></script>
 </head>
 <body>
@@ -16,24 +17,7 @@
 <canvas style="display: none;" width="800" height="600" style="border: 5px solid orange" id="canvas">Canvas not supported</canvas>
 <fieldset>
     <legend>Players</legend>
-    <div id="players">
-        <div class="player" data-id="<id-goes-here>">
-            <div class="row">
-                <label>Name:</label>
-                <label class="name">Pesho</label>
-            </div>
-            <div class="row">
-                <label>Money:</label>
-                <label class="money">500</label>
-            </div>
-            <div class="row">
-                <label>Bullets:</label>
-                <label class="bullets">6</label>
-            </div>
-            <button class="play">Play</button>
-            <button class="delete">Delete</button>
-        </div>
-    </div>
+    <div id="players"></div>
 </fieldset>
 <fieldset>
     <legend>Add Player</legend>
