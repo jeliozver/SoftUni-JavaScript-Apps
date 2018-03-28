@@ -105,6 +105,7 @@ function editBook() {
 
     request('PUT', BOOKS_BASE_URL + id, getAuthToken(), body)
         .then(() => {
+            showView('viewBooks');
             for (let entry of bks) {
                 if (entry._id === id) {
                     entry.title = body.title;
