@@ -1,0 +1,8 @@
+{
+  "name": "P01-Contact-Book",
+  "version": "0.0.1",
+  "dependencies": {
+    "handlebars": "latest",
+    "jquery": "latest"
+  }
+}
