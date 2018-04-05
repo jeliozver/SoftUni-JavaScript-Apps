@@ -1,0 +1,18 @@
+<section id="contacts">
+    <div class="container">
+        <div id="contact" class="box-large">
+            <div id="list">
+                {{> listContacts}}
+            </div>
+            <div id="details">
+                {{#if selected}}
+                    {{> contactDetails}}
+                {{else}}
+                    <div class="content">
+                        No contact selected.
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>

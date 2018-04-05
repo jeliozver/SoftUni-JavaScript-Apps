@@ -1,0 +1,12 @@
+<section id="welcome">
+    <div class="container centered">
+        {{> header}}
+        {{> navigation}}
+        {{#if isAuth}}
+            {{> contactsPage}}
+        {{else}}
+            {{> loginForm}}
+        {{/if}}
+        {{> footer}}
+    </div>
+</section>
