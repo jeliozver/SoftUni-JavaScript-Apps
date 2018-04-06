@@ -1,0 +1,20 @@
+<section id="viewAds" class="viewAds">
+    <h1 class="titleForm">Advertisements</h1>
+    <div id="ads" class="ads">
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Publisher</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Date Published</th>
+                <th>Actions</th>
+            </tr>
+            {{#each ads}}
+                {{> addRow}}
+            {{else}}
+                <p>No ads in database.</p>
+            {{/each}}
+        </table>
+    </div>
+</section>

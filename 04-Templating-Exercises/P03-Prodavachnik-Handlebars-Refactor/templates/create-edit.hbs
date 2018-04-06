@@ -1,0 +1,19 @@
+<section id="{{viewType}}" class="{{viewType}}">
+    <h1 class="titleForm">{{message}}</h1>
+    <form id="{{formType}}" class="form">
+        {{#if isEdit}}
+            <div><input type="hidden" name="id" required/></div>
+        {{/if}}
+        <div>Title:</div>
+        <div><input type="text" name="title" required/></div>
+        <div>Description:</div>
+        <div><textarea name="description" rows="10" required></textarea></div>
+        <div>Date Published:</div>
+        <div><input type="date" name="datePublished" required/></div>
+        <div>Price:</div>
+        <div><input type="number" step="0.01" name="price" required/></div>
+        <div>Image:</div>
+        <div><input type="url" name="image" required/></div>
+        <div><input type="button" id="{{buttonType}}" value="{{buttonValue}}"/></div>
+    </form>
+</section>

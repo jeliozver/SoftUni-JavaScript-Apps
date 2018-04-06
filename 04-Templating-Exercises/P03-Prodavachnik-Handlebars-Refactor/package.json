@@ -1,0 +1,8 @@
+{
+  "name": "P03-Prodavachnik-Handlebars-Refactor",
+  "version": "0.0.1",
+  "dependencies": {
+    "handlebars": "latest",
+    "jquery": "latest"
+  }
+}
