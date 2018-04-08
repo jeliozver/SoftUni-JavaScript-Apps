@@ -1,0 +1,29 @@
+{{> header}}
+<div class="content">
+    {{#if isAuth}}
+        {{> menu}}
+    {{else}}
+        {{> welcome}}
+    {{/if}}
+
+    {{#if isViewCatalog}}
+        {{> viewCatalog}}
+    {{/if}}
+
+    {{#if isViewCreate}}
+        {{> viewCreate}}
+    {{/if}}
+
+    {{#if isViewEdit}}
+        {{> viewEdit}}
+    {{/if}}
+
+    {{#if isViewMyPosts}}
+        {{> viewMyPosts}}
+    {{/if}}
+
+    {{#if isViewComments}}
+        {{> viewComments}}
+    {{/if}}
+</div>
+{{> footer}}
