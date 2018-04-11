@@ -1,0 +1,19 @@
+{{> header}}
+{{#if isAuth}}
+    {{> menu}}
+    <div class="content">
+        <div class="chirps">
+            <h2 class="titlebar">Discover</h2>
+            <div id="userlist">
+                {{#each users}}
+                    {{> user}}
+                {{else}}
+                    No users in database.
+                {{/each}}
+            </div>
+        </div>
+    </div>
+{{else}}
+    {{> loginView}}
+{{/if}}
+{{> footer}}

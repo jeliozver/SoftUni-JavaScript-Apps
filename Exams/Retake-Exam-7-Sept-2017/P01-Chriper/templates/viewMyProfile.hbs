@@ -1,0 +1,30 @@
+{{> header}}
+{{#if isAuth}}
+    {{> menu}}
+    <div class="content">
+        <div class="chirper">
+            <h2 class="titlebar">{{username}}</h2>
+            <form action="#/create" method="post" id="formSubmitChirp" class="chirp-form">
+                <textarea name="text" class="chirp-input"></textarea>
+                <input class="chirp-submit" id="btnSubmitChirp" value="Chirp" type="submit">
+            </form>
+            <div id="myStats" class="user-details">
+                <span>{{chirpsCount}} chirps</span> | <span>{{following}} following</span> | <span>{{followers}}
+                followers</span>
+            </div>
+        </div>
+        <div id="myChirps" class="chirps">
+            <h2 class="titlebar">Chirps</h2>
+            <div class="chirp">
+                {{#each chirps}}
+                    {{> chirp}}
+                {{else}}
+                    No chirps in database
+                {{/each}}
+            </div>
+        </div>
+    </div>
+{{else}}
+    {{> loginView}}
+{{/if}}
+{{> footer}}

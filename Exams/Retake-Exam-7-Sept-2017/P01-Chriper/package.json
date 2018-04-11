@@ -1,0 +1,9 @@
+{
+  "name": "P01-Chriper",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "handlebars": "latest",
+    "sammy": "latest"
+  }
+}
